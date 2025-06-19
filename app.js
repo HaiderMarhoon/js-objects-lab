@@ -18,10 +18,12 @@ const game = {
   ],
 }
 
+console.log("-----------answer Exercise 1--------------");
 // Exercise 1
 console.dir(pokemon, { maxArrayLength: null });
 
 // Exercise 2
+console.log("-----------answer Exercise 2--------------");
 console.log(game);
 
 /*
@@ -32,6 +34,7 @@ Exercise 3
 
 Solve Exercise 3 here:
 */
+console.log("-----------answer Exercise 3--------------");
 game.difficulty= ['Hard'];
 console.log(game);
 
@@ -44,6 +47,7 @@ Exercise 4
 
 Solve Exercise 4 here:
 */
+console.log("-----------answer Exercise 4--------------");
 game.party =[pokemon[0]];
 console.log(game.party);
 
@@ -56,6 +60,7 @@ Exercise 5
 
 Solve Exercise 5 here:
 */
+console.log("-----------answer Exercise 5--------------");
 game.party=[pokemon[2],pokemon[4],pokemon[7],pokemon[20]];
 console.log(game.party);
 
@@ -69,6 +74,7 @@ Exercise 6
 
 Solve Exercise 6 here:
 */
+console.log("-----------answer Exercise 6--------------");
 for (let i = 0;i<game.gyms.length; i++){
     if (game.gyms[i].difficulty <3){
         game.gyms[i].completed ="true";
@@ -92,12 +98,16 @@ Visit the MDN docs to learn more about the splice() method.
 
 Solve Exercise 7 here:
 */
+// console.log("-----------answer Exercise 7--------------");
 // console.log(game.party);
 // for(let i=0;i<game.party.length;i++){
-//     if(game.party[number])
-//     game.party.splice(i, 4);
-// }
-
+    
+//     if(game.party[i]){
+//       game.party.splice(i, 4);
+//         break
+//        }
+//   }
+// console.log(game.party);
 
 
 
@@ -108,6 +118,7 @@ Exercise 8
 
 Solve Exercise 8 here:
 */
+console.log("-----------answer Exercise 8--------------");
 for(let i=0;i<game.party.length;i++){
     console.log(game.party[i].name);
 }
@@ -120,6 +131,8 @@ Exercise 9
 
 Solve Exercise 9 here:
 */
+console.log("-----------answer Exercise 9--------------");
+
 
 /*
 Exercise 10
@@ -132,6 +145,8 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 
 Solve Exercise 10 here:
 */
+console.log("-----------answer Exercise 10--------------");
+
 
 /*
 Exercise 11
@@ -145,6 +160,7 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 
 Solve Exercise 11 here:
 */
+console.log("-----------answer Exercise 11--------------");
 
 
 /*
@@ -154,6 +170,7 @@ Exercise 12
 
 Solve Exercise 12 here:
 */
+console.log("-----------answer Exercise 12--------------");
 
 
 /*
@@ -178,6 +195,7 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 
 Solve Exercise 13 here:
 */
+console.log("-----------answer Exercise 13--------------");
 
 /*
 Exercise 14
@@ -190,6 +208,7 @@ This method should:
 
 Solve Exercise 14 here:
 */
+console.log("-----------answer Exercise 14--------------");
 
 /*
 Exercise 15
@@ -198,6 +217,7 @@ Exercise 15
 
 Solve Exercise 15 here:
 */
+console.log("-----------answer Exercise 15--------------");
 
 /*
 Exercise 16
@@ -206,3 +226,4 @@ Exercise 16
 
 Solve Exercise 16 here:
 */
+console.log("-----------answer Exercise 16--------------");
