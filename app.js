@@ -77,7 +77,7 @@ Solve Exercise 6 here:
 console.log("-----------answer Exercise 6--------------");
 for (let i = 0;i<game.gyms.length; i++){
     if (game.gyms[i].difficulty <3){
-        game.gyms[i].completed ="true";
+        game.gyms[i].completed =true;
     }
 }
 console.log(game.gyms);
@@ -98,16 +98,15 @@ Visit the MDN docs to learn more about the splice() method.
 
 Solve Exercise 7 here:
 */
-// console.log("-----------answer Exercise 7--------------");
-// console.log(game.party);
-// for(let i=0;i<game.party.length;i++){
-    
-//     if(game.party[i]){
-//       game.party.splice(i, 4);
-//         break
-//        }
-//   }
-// console.log(game.party);
+console.log("-----------answer Exercise 7--------------");
+for(let i=0;i<game.party.length;i++){
+   let index = game.party.findIndex(pokemon => pokemon.number === i);
+    if (index !== -1) {
+     game.party.splice(index, 1, { number: i+1 , name:[i+1] });
+     break;
+    }
+  }
+console.log(game.party);
 
 
 
@@ -132,6 +131,12 @@ Exercise 9
 Solve Exercise 9 here:
 */
 console.log("-----------answer Exercise 9--------------");
+let starterNumber=[1,2,3,4];
+pokemon.forEach(p => {
+  if (starterNumber.includes(p.number)){
+    console.log(p.name);
+  }
+});
 
 
 /*
@@ -146,6 +151,12 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 console.log("-----------answer Exercise 10--------------");
+game.catchPokemon = function(pokemonObj) {
+  this.party.push(pokemonObj);
+};
+game.catchPokemon(pokemon[1]);
+console.log(game.party);
+
 
 
 /*
@@ -161,6 +172,17 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 console.log("-----------answer Exercise 11--------------");
+game.catchPokemon = function(pokemonObj) {
+  this.party.push(pokemonObj);
+
+  let pokeballs = this.items.find(item => item.name ==="pokeballs");
+
+  if (pokeballs){
+    pokeballs.quantity -=1;
+  }
+};
+game.catchPokemon(pokemon[3]);
+console.log(game.items);
 
 
 /*
@@ -171,6 +193,13 @@ Exercise 12
 Solve Exercise 12 here:
 */
 console.log("-----------answer Exercise 12--------------");
+
+for (let i = 0;i<game.gyms.length; i++){
+    if (game.gyms[i].difficulty <6){
+        game.gyms[i].completed =true;
+    }
+}
+console.log(game.gyms);
 
 
 /*
@@ -196,6 +225,23 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 Solve Exercise 13 here:
 */
 console.log("-----------answer Exercise 13--------------");
+game.gymStatus = function(gymTally){
+     let complete =0;
+     let incomplete =0;
+    for (let i = 0;i<game.gyms.length; i++){
+      if (game.gyms[i].completed === true){
+        complete +=1;
+      }
+      else if (game.gyms[i].completed === false){
+        incomplete +=1;
+      }
+      else{
+        console.log("error")
+      }
+    }
+    console.log(`completed: ${complete}, incomplete: ${incomplete}`);
+}
+game.gymStatus();
 
 /*
 Exercise 14
@@ -209,7 +255,15 @@ This method should:
 Solve Exercise 14 here:
 */
 console.log("-----------answer Exercise 14--------------");
-
+game.partyCount = function(){
+  let pokemonCount = 0;
+  for (let i=0; i<game.party.length; i++){
+       pokemonCount +=1;
+  }
+  console.log(`number in the party= ${pokemonCount -1}`);
+}
+console.log(game.party);
+game.partyCount();
 /*
 Exercise 15
 1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
@@ -218,6 +272,12 @@ Exercise 15
 Solve Exercise 15 here:
 */
 console.log("-----------answer Exercise 15--------------");
+for (let i = 0;i<game.gyms.length; i++){
+    if (game.gyms[i].difficulty <8){
+        game.gyms[i].completed =true;
+    }
+}
+console.log(game.gyms);
 
 /*
 Exercise 16
@@ -227,3 +287,4 @@ Exercise 16
 Solve Exercise 16 here:
 */
 console.log("-----------answer Exercise 16--------------");
+console.log(game);
